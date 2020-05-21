@@ -1,0 +1,40 @@
+
+Showing logs for build [32mmathieucasse-environment-jenkin-xpmnc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-4mwkz[0m
+{"level":"info","ts":1590062965.3450465,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590062965.34594,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmathieucasse-environment-jenkin-xpmnc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-zls6z[0m
+{"level":"info","ts":1590062966.4575858,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1590062966.4590223,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mmathieucasse-environment-jenkin-xpmnc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmathieucasse-environment-jenkin-xpmnc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-mathieucasse-environment-jenkin-xpmnc-nh54j[0m
+{"level":"info","ts":1590063001.847829,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590063003.0697372,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/************/environment-********-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mmathieucasse-environment-jenkin-xpmnc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:cd55803255a55cd82367b69d4f6a90658eaf73d3,7:ab95ba8bd190300a79d1b24fd998398608289a47
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow ab95ba8bd190300a79d1b24fd998398608289a47: cd55803255a55cd82367b69d4f6a90658eaf73d3:
+DEBUG: ran git fetch --unshallow origin ab95ba8bd190300a79d1b24fd998398608289a47: cd55803255a55cd82367b69d4f6a90658eaf73d3: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard cd55803255a55cd82367b69d4f6a90658eaf73d3
+DEBUG: ran git reset --hard cd55803255a55cd82367b69d4f6a90658eaf73d3 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge ab95ba8bd190300a79d1b24fd998398608289a47
+DEBUG: ran git merge ab95ba8bd190300a79d1b24fd998398608289a47 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e cd55803255a55cd82367b69d4f6a90658eaf73d3..HEAD
+Merged SHA ab95ba8bd190300a79d1b24fd998398608289a47 with commit message 'chore: Promote hello-4-1 to version 0.0.1' into base branch master
+
+Showing logs for build [32mmathieucasse-environment-jenkin-xpmnc-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
